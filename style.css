@@ -1,0 +1,109 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;400;600&display=swap');
+
+:root {
+    --Red: hsl(0, 78%, 62%);
+    --Cyan: hsl(180, 62%, 55%);
+    --Orange: hsl(34, 97%, 64%);
+    --Blue: hsl(212, 86%, 64%);
+
+    --Very-Dark-Blue: hsl(234, 12%, 34%);
+    --Grayish-Blue: hsl(229, 6%, 66%);
+    --Very-Light-Gray: hsl(0, 0%, 98%);
+
+    --font-normal: 200;
+    --font-regular: 400;
+    --font-bold: 600;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-size: 15px;
+    font-family: 'Poppins', sans-serif;
+    background-color: var(--Very-Light-Gray);
+}
+
+main {
+    max-width: 19.5rem;
+    margin: 1rem auto;
+    text-align: center;
+}
+
+h1 { 
+    font-weight: var(--font-normal); 
+    display: grid;
+}
+
+span { font-weight: var(--font-bold); }
+
+p {
+    color: var(--Grayish-Blue);
+    margin: 1.5rem 0;
+    font-weight: var(--font-regular);
+}
+
+.card-grid {
+    display: grid;
+    gap: 2rem;
+}
+
+.card {
+    background: white;
+    padding: 1rem;
+    text-align: left;
+    border-radius: 0.2rem;
+    box-shadow: 1px 9px 8px 1px var(--Grayish-Blue);
+}
+
+.card:nth-child(1) { border-top: 4px solid var(--Blue);}
+
+.card:nth-child(2) { border-top: 4px solid var(--Red); }
+
+.card:nth-child(3) { border-top: 4px solid var(--Cyan); }
+
+.card:nth-child(4) { border-top: 4px solid var(--Orange); }
+
+h2 {
+    font-size: 18px;
+    font-weight: var(--font-bold);
+    color: var(--Very-Dark-Blue);
+}
+
+.card p { margin-top: 6px; }
+
+.card img {
+    width: 20%;
+    float: inline-end;
+    margin-right: 5px;
+}
+
+@media (min-width: 900px) {
+    main { 
+        max-width: 60.5rem; 
+        margin-top: 1.5rem;
+    }
+
+    p {
+        max-width: 28rem;
+        margin: 1.5rem auto;
+    }
+
+    .card-grid { grid-template-columns: repeat(3, 18.5rem); }
+
+    .card:nth-child(1),
+    .card:nth-child(3) {
+        position: relative;
+        top: 6rem;
+    }
+
+    .card:nth-child(4) {
+        position: relative;
+        left: 20.5rem
+    }
+
+    
+}
